@@ -1,0 +1,14 @@
+// root
+:root {
+	--index: calc(1vw + 1vh);
+
+	--font-primary: 'GothamPro',
+		sans-serif;
+	--primary-color: #91C4D9;
+	--second-collor: #E38AA8;
+
+	--hover-trans: .4s
+}
+
+// transition
+$hover-trans: 0.4s;
