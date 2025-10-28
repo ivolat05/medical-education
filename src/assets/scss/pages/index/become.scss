@@ -1,0 +1,126 @@
+.become {
+	padding-top: rem(53);
+	padding-bottom: rem(82);
+	background: var(--line-gradient);
+	//box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+	box-shadow: var(--shadow-5);
+
+	@include mw992 {
+		padding-top: rem(35);
+		padding-bottom: rem(53);
+	}
+
+	&__wrapp {
+		max-width: rem(1221);
+		display: flex;
+		justify-content: space-between;
+		padding-right: rem(63);
+
+		@include mw1240 {
+			padding-right: rem(10);
+			padding-left: rem(10);
+		}
+
+		@include mw992 {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&-coll {
+			width: 100%;
+			max-width: rem(450);
+
+			@include mw992 {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&__title {
+		font-style: normal;
+		font-weight: 700;
+		font-size: rem(32);
+		line-height: rem(39);
+		text-transform: uppercase;
+
+		color: var(--white);
+
+		@include mw992 {
+			text-align: center;
+		}
+	}
+
+	&__text {
+		color: var(--white);
+		font-size: rem(15);
+		padding-top: rem(8);
+
+		@include mw992 {
+			text-align: center;
+		}
+	}
+
+	&__btn {
+		width: 100%;
+		max-width: rem(271);
+		margin-top: rem(20);
+
+		@include mw992 {
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: rem(27);
+		}
+	}
+
+	&__list {
+		gap: rem(40) rem(10);
+		max-width: rem(565);
+		padding-top: rem(5);
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: space-between;
+
+		@include mw992 {
+			max-width: 100%;
+			padding-top: rem(44);
+		}
+
+		@media(max-width:rem(572.99)) {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&-icon {
+			@include imgBox(rem(100), rem(100));
+			position: relative;
+
+			border-radius: 50%;
+			border: rem(3) solid transparent;
+			background-image:
+				linear-gradient(#6383C7, #6383C7),
+
+				linear-gradient(115deg, white, rgba(255, 255, 255, 0));
+
+			background-origin: border-box;
+			background-clip: content-box, border-box;
+			margin-left: auto;
+			margin-right: auto;
+
+			img,
+			svg {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&-text {
+			text-align: center;
+			padding-top: rem(29);
+			display: block;
+			color: var(--white);
+		}
+	}
+}

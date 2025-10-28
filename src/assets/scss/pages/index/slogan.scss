@@ -1,0 +1,26 @@
+.slogan {
+	background: var(--light-gray);
+	padding-top: rem(12);
+	padding-bottom: rem(19);
+
+	&-container {
+		padding-right: rem(55);
+
+		@include mw992 {
+			padding-right: rem(10);
+			padding-left: rem(10);
+		}
+	}
+
+	&-title {
+		font-style: italic;
+		text-align: center;
+
+		color: var(--navy-blue);
+
+		@include mw992 {
+			font-size: rem(19);
+
+		}
+	}
+}

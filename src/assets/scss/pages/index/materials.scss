@@ -1,0 +1,164 @@
+.materials {
+	padding-top: rem(47);
+
+	@include mw992 {
+		padding-top: rem(40);
+	}
+
+	&__wrapp {
+
+		padding-right: rem(11);
+		padding-left: rem(38);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		justify-content: space-between;
+		position: relative;
+		gap: rem(45);
+
+		&::after {
+			content: "";
+			width: rem(2);
+			height: rem(127);
+			background: var(--light-gray);
+			position: absolute;
+			top: 50%;
+			left: 51%;
+			transform: translate(-50%, -50%);
+
+			@include mw992 {
+				width: 0;
+				height: 0;
+			}
+		}
+
+		@include mw1240 {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		@include mw992 {
+			flex-direction: column;
+		}
+	}
+
+	&__box {
+		display: grid;
+		grid-template-columns: rem(100) 1fr rem(115);
+		align-items: center;
+		gap: rem(20) rem(27);
+		width: 100%;
+		max-width: rem(487);
+		position: relative;
+
+		@include mw992 {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&-img {
+			@include imgBox(rem(100), rem(100));
+			border-radius: 50%;
+
+			background: url("../../assets/img/back-icon.svg") no-repeat center center/contain, #6383C7;
+			overflow: hidden;
+
+			img,
+			svg {
+				width: calc(100% - rem(3));
+				height: calc(100% - rem(3));
+				object-fit: contain;
+			}
+
+
+		}
+
+		&-title {
+			color: var(--navy-blue);
+		}
+
+		&-title,
+		&-text {
+			@include mw992 {
+				text-align: center;
+			}
+		}
+
+
+		&-btn {
+			@include mw992 {
+				width: rem(114);
+			}
+
+		}
+	}
+
+	&__box+&__box {
+		@include mw992 {
+			padding-top: rem(37);
+
+			&::after {
+				content: "";
+				height: rem(2);
+				width: rem(230);
+				background: var(--light-gray);
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				position: absolute;
+			}
+		}
+	}
+
+	&__info {
+		width: 100%;
+		max-width: rem(1060);
+		margin-left: auto;
+		margin-right: auto;
+
+		box-shadow: var(--shadow-5);
+		background: linear-gradient(to right, white, #999999);
+		padding: rem(2);
+		border-radius: rem(70);
+		margin-top: rem(50);
+
+		@include mw992 {
+			margin-top: rem(36);
+		}
+
+		&-wrapp {
+			background:
+				linear-gradient(35deg, #6383C7 16%, #3C4677 100%);
+			border-radius: rem(70);
+			min-height: rem(50);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			font-style: normal;
+			font-weight: 700;
+			font-size: rem(20);
+			line-height: rem(16);
+			text-align: center;
+			text-transform: uppercase;
+
+			color: var(--white);
+			padding: rem(10) rem(15);
+			padding-right: 15px;
+
+			@include mw1240 {
+				line-height: 127%;
+			}
+		}
+
+		&-container {
+			padding-right: rem(55);
+
+			@include mw1240 {
+				padding-right: rem(10);
+				padding-left: rem(10);
+			}
+		}
+	}
+
+}

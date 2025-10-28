@@ -126,3 +126,33 @@ time {
 		padding-right: rem(10);
 	}
 }
+
+.section__header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	&::after,
+	&::before {
+		content: "";
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		position: absolute;
+		width: calc(50% - rem(85));
+		height: rem(2);
+		background: var(--blue);
+	}
+
+	&::before {
+		left: auto;
+		right: 0;
+	}
+
+	&-title {
+		text-align: center;
+		color: var(--navy-blue);
+	}
+}
