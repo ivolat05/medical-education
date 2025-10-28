@@ -55,17 +55,17 @@ size(40, 28, 1920, 360, px)
 }
 
 @function max-size($size) {
-    @return max($size * 1rem, $size * 1px);
+	@return max($size * 1rem, $size * 1px);
 }
 
 @function size1920($max: 32, $min: 20) {
-    @return size($max, $min, 1919.99, 1280);
+	@return size($max, $min, 1919.99, 1280);
 }
 
 @function size1240($max: 32, $min: 20) {
-    @return size($max, $min, 1260, 767);
+	@return size($max, $min, 1260, 767);
 }
 
 @function size760($max: 32, $min: 20) {
-    @return size($max, $min, 760, 360);
+	@return size($max, $min, 760, 360);
 }
