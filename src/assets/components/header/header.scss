@@ -1,0 +1,81 @@
+.header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: var(--z-index-3);
+
+	background: var(--white);
+	box-shadow: var(--shadow);
+	padding-top: rem(18);
+
+	&__container {
+		gap: rem(24);
+	}
+
+	&__logo {
+		@include imgBox(rem(166), rem(55));
+	}
+
+	&__burger {
+		@include burger;
+		display: none;
+
+		@include mw992 {
+			display: block;
+		}
+	}
+
+	&__button {
+		width: rem(163);
+
+		@include mw992 {
+			width: 100%;
+			max-width: rem(163);
+		}
+	}
+
+	&__wrapp {
+		gap: rem(20);
+
+		@include mw992 {
+			gap: rem(8);
+		}
+
+		&-list {
+			gap: rem(20);
+
+			@include mw992 {
+				position: absolute;
+				left: 0;
+				top: 0;
+				transition: $hover-trans;
+				transform: translateY(-100%);
+				z-index: var(--z-index-2);
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				padding: rem(95) rem(20);
+				background: var(--white);
+				flex-direction: column;
+				justify-content: center;
+
+				&.-is-active {
+					transform: translate(0);
+				}
+
+			}
+		}
+
+		&-inner {
+			flex-shrink: 0;
+		}
+	}
+
+	&__btn {
+		flex-shrink: 0;
+		width: 100%;
+		min-width: rem(163);
+
+	}
+}

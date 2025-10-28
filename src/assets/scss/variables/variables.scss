@@ -2,13 +2,52 @@
 :root {
 	--index: calc(1vw + 1vh);
 
-	--font-primary: 'GothamPro',
+	--font-primary: 'ClearSans',
 		sans-serif;
-	--primary-color: #91C4D9;
-	--second-collor: #E38AA8;
+	/*color*/
+	--blue: #6383C7;
+	--bllue-dark: #3C4677;
+	--navy-blue: #253F73;
+	--sky-blue: #16C5DB;
+	--light-gray: #EAEAEA;
+	--gray: #D9D9D9;
+	--gray-dark-47: rgba(226, 226, 226, 0.47);
+	--gray-medium: #999999;
+	--white: #ffffff;
+	--white-80: rgba(255, 255, 255, .8);
+	--white-86: rgba(255, 255, 255, .86);
+	--black-0: rgba(0, 0, 0, 0);
 
-	--hover-trans: .4s
+	--black: #000000;
+	/*gradient*/
+	--blue-gradient: linear-gradient(99.53deg, #6383C7 23.8%, #3C4677 118.93%);
+	--blue-gradient-2: linear-gradient(180deg, #6383C7 22.02%, #3C4677 95.75%);
+	--blue-dark-gradient: linear-gradient(180deg, #3C4677 22.02%, #6383C7 72.71%);
+	--blue-dark-gradient-15deg: linear-gradient(-15deg, #6383C7 22.02%, #3C4677 95.75%);
+	--bluce-dark-gradien-72: linear-gradient(180deg, #6383C722.02%, #3C4677 72.71%);
+	/*shadow*/
+	--shadow-inset: inset 0px 4px 15px 6px rgba(0, 0, 0, 0.25);
+	--shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.25);
+	--shadow-2: -12px 4px 14px rgba(0, 0, 0, 0.25);
+	--shadow-3: -17px 4px 14px rgba(0, 0, 0, 0.25);
+	--shadow-4: 6px 6px 4px rgba(0, 0, 0, 0.25);
+	--hover-trans: .4s --hover-trans:.4s;
+
+
+	--z-index-0: 0;
+	--z-index-1: 1;
+	--z-index-2: 2;
+	--z-index-3: 3;
+
+	/*--burger-width --*/
+	--burger-width: #{rem(46)};
+	--burger-height: #{rem(36)};
+	--burger-line-height:#{rem(2)};
+	--burger-line-width:#{rem(20)};
+	--burger-color: #fff;
+
 }
+
 
 // transition
 $hover-trans: 0.4s;

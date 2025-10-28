@@ -6,9 +6,13 @@ html {
 	overflow-y: scroll;
 	scrollbar-gutter: stable;
 
-	&._fixed {
-		overflow: hidden;
+	&.-fixed-menu {
+		@include mw992 {
+			overflow: hidden;
+		}
+
 	}
+
 }
 
 *,
@@ -100,13 +104,21 @@ time {
 
 .page {
 	display: flex;
-	min-height: 100vh;
+	min-height: 100dvh;
 	flex-direction: column;
-
 	overflow: hidden;
 }
 
 .container {
-	margin-inline: auto;
+	margin-left: auto;
+	margin-right: auto;
 	width: 100%;
+	max-width: rem(1200);
+
+	padding-left: rem(10);
+	padding-right: rem(77);
+
+	@include mw1240 {
+		padding-right: rem(10);
+	}
 }

@@ -1,0 +1,54 @@
+.btn,
+.btn-br,
+.link,
+.link-blue {
+
+	font-family: 'ClearSans';
+	font-style: normal;
+	font-weight: 700;
+	font-size: rem(12);
+	line-height: rem(16);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.btn,
+.btn-br {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: rem(36);
+	padding: rem(2) rem(18);
+	border-radius: rem(70);
+	border: rem(1) solid var(--sky-blue);
+}
+
+.btn {
+
+	background: var(--sky-blue);
+	color: var(--white);
+	@include interactive-states(background, var(--black-0), var(--black-0), var(--black-0));
+	@include interactive-states(color, var(--sky-blue), var(--sky-blue), var(--sky-blue));
+}
+
+.btn-br {
+	background: var(--black-0);
+	color: var(--sky-blue);
+	@include interactive-states(background, var(--sky-blue), var(--sky-blue), var(--sky-blue));
+	@include interactive-states(color, var(--white), var(--white), var(--white));
+}
+
+.link,
+.link-blue {
+	display: block;
+}
+
+.link {
+	color: var(--sky-blue);
+	@include interactive-states(color, var(--navy-blue), var(--navy-blue), var(--navy-blue));
+}
+
+.link-blue {
+	color: var(--navy-blue);
+	@include interactive-states(color, var(--sky-blue), var(--sky-blue), var(--sky-blue));
+}

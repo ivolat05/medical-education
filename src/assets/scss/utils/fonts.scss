@@ -19,13 +19,38 @@
 }
 
 h1,
-.h1 {}
+.h1 {
+
+	font-weight: 700;
+	font-size: rem(39);
+	line-height: rem(48);
+	text-transform: uppercase;
+
+	@include mw992 {
+		font-size: rem(24);
+		line-height: rem(30);
+	}
+
+}
 
 h2,
-.h2 {}
+.h2 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: rem(26);
+	line-height: rem(26);
+	text-transform: uppercase;
+}
 
 h3,
-.h3 {}
+.h3 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: rem(20);
+	line-height: rem(26);
+	text-transform: uppercase;
+
+}
 
 h4,
 .h4 {}
