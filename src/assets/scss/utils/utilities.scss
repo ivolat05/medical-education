@@ -33,6 +33,10 @@ body {
 	}
 }
 
+picture {
+	display: contents;
+}
+
 * {
 	&::-webkit-scrollbar-thumb {
 		@include scrollStyle(var(--blue));
