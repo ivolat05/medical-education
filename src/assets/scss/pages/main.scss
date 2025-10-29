@@ -241,8 +241,8 @@
 			@include mw992 {
 				margin: 0;
 				width: 100%;
-				max-width: 400px;
-				min-width: 340px;
+				max-width: rem(400);
+				min-width: rem(340);
 				grid-template-columns: rem(128) 1fr;
 				padding-right: rem(43);
 			}
@@ -323,8 +323,8 @@
 			text-align: right;
 			text-transform: uppercase;
 			color: var(--navy-blue);
-			padding-top: 3px;
-			padding-right: 3px;
+			padding-top: rem(3);
+			padding-right: rem(3);
 
 		}
 
@@ -438,8 +438,8 @@
 
 			font-style: normal;
 			font-weight: 700;
-			font-size: 12px;
-			line-height: 16px;
+			font-size: rem(12);
+			line-height: rem(16);
 			text-align: center;
 			text-transform: uppercase;
 
@@ -464,7 +464,7 @@
 		}
 
 		&-street {
-			max-width: 195px;
+			max-width: rem(195);
 			text-transform: lowercase;
 			font-weight: 400;
 		}
@@ -480,7 +480,7 @@
 		color: var(--white);
 
 		@include mw992 {
-			font-size: 16px;
+			font-size: rem(16);
 		}
 	}
 
@@ -623,9 +623,9 @@
 
 		@include mw992 {
 
-			top: 267px;
-			width: 644px;
-			left: -263px;
+			top: rem(267);
+			width: rem(644);
+			left: rem(263);
 		}
 	}
 
@@ -666,8 +666,8 @@
 	&-left,
 	&-right {
 		position: absolute;
-		width: 1980px;
-		height: 1980px;
+		width: rem(1980);
+		height: rem(1980);
 		transform: rotate(55deg);
 		transform-origin: 0 0;
 	}
@@ -712,6 +712,269 @@
 		@media(max-width:rem(520.99)) {
 
 			left: rem(-257);
+		}
+	}
+}
+
+.main__events {
+	background: var(--line-gradient-white);
+	min-height: rem(861);
+	min-height: rem(770);
+
+	&-nav {
+		padding-left: rem(196);
+
+		@include mw1240 {
+			padding-left: 0;
+		}
+
+		&-open {
+			fill: var(--navy-blue);
+
+			svg {
+				fill: inherit;
+			}
+
+			border-color: var(--navy-blue);
+			color: var(--navy-blue);
+			@include interactive-states(color, var(--white), var(--white), var(--white));
+			@include interactive-states(fill, var(--white), var(--white), var(--white));
+		}
+
+		&-list {
+			width: fit-content;
+			margin-left: auto;
+			margin-right: auto;
+			gap: rem(51);
+			border-color: var(--navy-blue);
+
+			@include mw992 {
+				border: none;
+			}
+
+			a {
+				color: var(--navy-blue);
+				@include interactive-states(color, var(--sky-blue), var(--sky-blue), var(--sky-blue));
+			}
+		}
+	}
+
+	&-back {
+		&-img {
+			position: absolute;
+			left: rem(-309);
+			top: rem(46);
+			width: rem(933);
+			object-fit: contain;
+			z-index: 1;
+			opacity: .7;
+
+			@include mw992 {
+				left: rem(-516);
+			}
+		}
+
+		.main__back-left {
+			transform: rotate(-35deg);
+			transform-origin: initial;
+			left: rem(-1267);
+			background: var(--line-gradient-white);
+			box-shadow: var(--shadow-6);
+
+			@include mw992 {
+				display: block;
+				left: rem(-1537);
+
+				@include mw767 {
+					left: rem(-1517);
+					transform: rotate(-31deg);
+				}
+			}
+
+		}
+
+		.main__back-opacity {
+			transform: rotate(-35deg);
+			transform-origin: initial;
+			left: rem(-1130);
+
+			@include mw992 {
+				display: block;
+				left: rem(-1420);
+
+			}
+
+			@include mw767 {
+				left: rem(-1400);
+				transform: rotate(-31deg);
+			}
+		}
+
+		.main__back-img {
+			top: rem(38);
+			left: rem(316);
+
+			@include mw992 {
+				top: rem(50);
+				left: 0;
+				width: rem(963);
+			}
+
+			@include mw767 {
+				top: rem(-86);
+				left: rem(-74);
+			}
+		}
+
+		.main__back-right {
+			left: rem(797);
+
+			@include mw992 {
+				display: none;
+			}
+		}
+	}
+}
+
+.main__case {
+	width: 100%;
+	max-width: rem(508);
+	padding-top: rem(18);
+
+
+	@include mw767 {
+		max-width: rem(425);
+		padding-top: rem(49);
+	}
+
+	&-img {
+		width: rem(297);
+		img,
+
+		svg {
+			width: 100%;
+			object-fit: contain;
+		}
+
+		@include mw767 {
+			width: rem(122);
+		}
+	}
+
+	&-subtitle {
+		padding-top: rem(23);
+		font-style: normal;
+		font-weight: 400;
+		font-size: rem(23);
+		line-height: rem(31);
+		text-transform: uppercase;
+		color: var(--navy-blue);
+
+		@include mw767 {
+			font-size: rem(19);
+			max-width: rem(200);
+		}
+	}
+
+	&-title {
+		padding-top: rem(7);
+		font-style: normal;
+		font-weight: 700;
+		font-size: rem(39);
+		line-height: rem(48);
+		text-transform: uppercase;
+		color: var(--navy-blue);
+
+		@include mw767 {
+			font-size: rem(24);
+			line-height: 150%;
+			max-width: rem(340);
+		}
+	}
+
+	&-place {
+		&-name {
+			font-style: normal;
+			font-weight: 700;
+			font-size: rem(27);
+			line-height: rem(37);
+			text-transform: uppercase;
+			color: var(--navy-blue);
+
+			@include mw767 {
+				font-size: rem(20);
+			}
+		}
+
+		&-date {
+			font-style: normal;
+			font-weight: 400;
+			font-size: rem(23);
+			line-height: rem(31);
+			text-transform: uppercase;
+			color: var(--navy-blue);
+
+			@include mw767 {
+				font-size: rem(18);
+			}
+		}
+	}
+
+	&-format {
+		font-style: normal;
+		font-weight: 400;
+		font-size: rem(23);
+		line-height: rem(31);
+		color: var(--navy-blue);
+		gap: rem(14);
+
+		@include mw767 {
+			font-size: rem(16);
+		}
+
+		img,
+		svg {
+			flex-shrink: 0;
+			object-fit: contain;
+			width: rem(42);
+
+			@include mw767 {
+				width: rem(25);
+			}
+		}
+	}
+
+	&-btn {
+		height: rem(50);
+		width: rem(238);
+		font-style: normal;
+		font-weight: 700;
+		font-size: rem(22);
+		line-height: 100%;
+		text-align: center;
+		text-transform: uppercase;
+
+		color: #FFFFFF;
+
+
+	}
+
+	&-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(20);
+		flex-wrap: wrap;
+		padding-top: rem(23);
+		margin-top: rem(30);
+		border-top: rem(2) solid var(--navy-blue);
+	}
+
+	&-wrapp {
+		padding-top: rem(64);
+
+		@include mw767 {
+			padding-top: rem(40);
 		}
 	}
 }

@@ -101,7 +101,7 @@
 		}
 
 		&-btn {
-			margin-top: 4px;
+			margin-top: rem(4);
 			width: rem(112);
 
 			@media(max-width:rem(572.99)) {

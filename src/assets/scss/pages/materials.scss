@@ -144,7 +144,7 @@
 
 			color: var(--white);
 			padding: rem(10) rem(15);
-			padding-right: 15px;
+			padding-right: rem(15);
 
 			@include mw1240 {
 				line-height: 127%;
