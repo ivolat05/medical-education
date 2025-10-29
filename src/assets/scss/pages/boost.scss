@@ -3,13 +3,25 @@
 	padding-bottom: rem(84);
 
 	@include mw992 {
-		padding-top: rem(50);
-		padding-bottom: rem(65);
+		padding-top: rem(42);
+		padding-bottom: rem(72);
+	}
+
+	&__header {
+
+		&::after,
+		&::before {
+			width: calc(50% - rem(130));
+		}
 	}
 
 	&__link {
 		width: rem(170);
 		gap: rem(14);
+
+		@include mw992 {
+			gap: rem(11);
+		}
 
 		&-img {
 			width: rem(80);

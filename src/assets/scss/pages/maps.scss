@@ -4,7 +4,7 @@
 
 	@include mw992 {
 		padding-top: rem(50);
-		padding-bottom: rem(50);
+		padding-bottom: rem(33);
 	}
 
 	&__container {
@@ -21,6 +21,10 @@
 		&::after,
 		&::before {
 			width: calc(50% - rem(157));
+
+			@include mw992 {
+				width: calc(50% - rem(140));
+			}
 		}
 	}
 
@@ -35,7 +39,7 @@
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
-
+			gap: rem(12);
 		}
 	}
 
@@ -51,9 +55,8 @@
 		}
 
 		@include mw992 {
-			width: calc(100% + rem(20));
-			margin-left: rem(-10);
-			margin-right: rem(-10);
+			height: auto;
+			aspect-ratio: 355/230;
 		}
 	}
 
@@ -61,6 +64,10 @@
 		display: flex;
 		flex-direction: column;
 		gap: rem(15);
+
+		@include mw992 {
+			width: 100%;
+		}
 
 		&-title {
 			color: var(--navy-blue);
@@ -87,7 +94,9 @@
 			width: rem(168);
 
 			@include mw992 {
-				margin-top: rem(20);
+				margin-top: rem(8);
+				margin-left: auto;
+				margin-right: auto;
 			}
 		}
 	}
