@@ -1,0 +1,44 @@
+.documents {
+
+	background: var(--blue-gradient);
+	box-shadow: var(--shadow-inset);
+	padding-top: rem(60);
+	padding-bottom: rem(69);
+
+	@include mw992 {
+		padding-top: rem(50);
+		padding-bottom: rem(50);
+	}
+
+	&__list {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(620);
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		gap: rem(45);
+		flex-direction: column;
+
+		@include mw992 {
+			align-items: center;
+		}
+	}
+
+	&__box {
+		max-width: rem(541);
+
+		&-title,
+		&-text {
+			color: var(--white);
+		}
+
+		&-text {
+			font-size: rem(15);
+		}
+
+		&-btn {
+			width: rem(172);
+		}
+	}
+}

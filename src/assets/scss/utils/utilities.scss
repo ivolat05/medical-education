@@ -119,10 +119,11 @@ time {
 	width: 100%;
 	max-width: rem(1200);
 
-	padding-left: rem(10);
-	padding-right: rem(77);
+	padding-left: rem(32);
+	padding-right: rem(57);
 
 	@include mw1240 {
+		padding-left: rem(10);
 		padding-right: rem(10);
 	}
 }

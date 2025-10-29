@@ -9,7 +9,7 @@
 
 	&__container {
 		max-width: rem(1220);
-		padding-right: rem(53);
+		padding-right: rem(30);
 
 		@include mw992 {
 			padding-right: rem(10);

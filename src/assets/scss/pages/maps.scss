@@ -1,0 +1,94 @@
+.maps {
+	padding-top: rem(56);
+	padding-bottom: rem(57);
+
+	@include mw992 {
+		padding-top: rem(50);
+		padding-bottom: rem(50);
+	}
+
+	&__container {
+		max-width: rem(1225);
+		padding-right: rem(31);
+
+		@include mw1240 {
+			padding-right: rem(10);
+		}
+	}
+
+	&__header {
+
+		&::after,
+		&::before {
+			width: calc(50% - rem(157));
+		}
+	}
+
+	&__wrapp {
+		padding-top: rem(44);
+		display: grid;
+		grid-template-columns: rem(560) 1fr;
+		gap: rem(30) rem(64);
+		align-items: center;
+
+		@include mw992 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+		}
+	}
+
+	&__box {
+		width: 100%;
+		height: rem(340);
+
+		img,
+		svg,
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+
+		@include mw992 {
+			width: calc(100% + rem(20));
+			margin-left: rem(-10);
+			margin-right: rem(-10);
+		}
+	}
+
+	&__coll {
+		display: flex;
+		flex-direction: column;
+		gap: rem(15);
+
+		&-title {
+			color: var(--navy-blue);
+			padding-bottom: rem(17);
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				height: rem(2);
+				width: rem(81);
+				background: var(--navy-blue);
+			}
+		}
+
+		&-text {
+			color: var(--black);
+		}
+
+		&-btn {
+			margin-top: rem(34);
+			width: rem(168);
+
+			@include mw992 {
+				margin-top: rem(20);
+			}
+		}
+	}
+}

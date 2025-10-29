@@ -1,0 +1,28 @@
+.boost {
+	padding-top: rem(55);
+	padding-bottom: rem(84);
+
+	@include mw992 {
+		padding-top: rem(50);
+		padding-bottom: rem(65);
+	}
+
+	&__link {
+		width: rem(170);
+		gap: rem(14);
+
+		&-img {
+			width: rem(80);
+		}
+
+		&-text {
+			font-size: rem(14);
+			line-height: rem(19);
+			text-align: center;
+		}
+	}
+
+	&__wrapp {
+		padding-top: rem(47);
+	}
+}

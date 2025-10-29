@@ -4,7 +4,7 @@
 	padding-bottom: rem(19);
 
 	&-container {
-		padding-right: rem(55);
+		padding-right: rem(32);
 
 		@include mw992 {
 			padding-right: rem(10);
@@ -20,6 +20,16 @@
 
 		@include mw992 {
 			font-size: rem(19);
+
+		}
+	}
+
+	&__event {
+
+		&-title {
+			font-style: normal;
+			font-size: rem(20);
+
 
 		}
 	}
