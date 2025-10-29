@@ -783,6 +783,10 @@
 			@include mw992 {
 				left: rem(-516);
 			}
+
+			@include mw767 {
+				display: none;
+			}
 		}
 
 		.main__back-left {
