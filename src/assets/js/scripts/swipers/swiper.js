@@ -27,6 +27,31 @@ const installSwiperNearest = {
 	},
 };
 
+const swiperUncos = document.querySelector(".uncos__swiper");
+const installSwiperUncos = {
+	slidesPerView: 3,
+	spaceBetween: pxToSwiper(27),
+	breakpoints: {
+		[pxToSwiper(319.99)]: {
+			slidesPerView: 1,
+			spaceBetween: pxToSwiper(27),
+		},
+		[pxToSwiper(572.99)]: {
+			slidesPerView: 2,
+			spaceBetween: pxToSwiper(15),
+		},
+
+		[pxToSwiper(1100.99)]: {
+			slidesPerView: 3,
+			spaceBetween: pxToSwiper(25),
+		},
+	},
+	navigation: {
+		nextEl: ".uncos__btn-next",
+		prevEl: ".uncos__btn-prev",
+	},
+};
+
 function initSwiper(swiper, installSwiper) {
 	try {
 		new Swiper(swiper, installSwiper);
@@ -38,4 +63,5 @@ function initSwiper(swiper, installSwiper) {
 // Запускаем Swiper после загрузки DOM
 document.addEventListener("DOMContentLoaded", () => {
 	initSwiper(swiperNearest, installSwiperNearest);
+	initSwiper(swiperUncos, installSwiperUncos);
 });

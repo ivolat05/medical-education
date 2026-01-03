@@ -139,3 +139,15 @@
 		}
 	}
 }
+
+.footer-moir-social {
+	gap: rem(10);
+
+	&-link {
+		text-align: right;
+
+		@include mw767 {
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,151 @@
+.uncos {
+	background: var(--white);
+	padding-top: rem(56);
+	padding-bottom: rem(62);
+
+	@include mw767 {
+		padding-bottom: rem(55);
+	}
+
+	&__container {
+		padding-left: rem(20);
+		padding-right: rem(20);
+
+		@include mw1240 {
+			padding-left: rem(10);
+			padding-right: rem(10);
+		}
+	}
+
+	&__swiper {
+		padding-top: rem(48);
+
+		@include mw767 {
+			padding-top: rem(45);
+		}
+
+		&-slide {
+			opacity: 0;
+			pointer-events: none;
+
+			&.swiper-slide-active,
+			&.swiper-slide-active+&,
+			&.swiper-slide-active+&+& {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+	}
+
+	&__footer {
+		gap: rem(17);
+		padding-top: rem(45);
+
+		@include mw767 {
+			padding-top: rem(36);
+		}
+
+		&-btn {
+			min-width: rem(172);
+		}
+	}
+
+
+	&__btn {
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include square(rem(36));
+		background: var(--sky-blue);
+		fill: var(--white);
+
+		border: rem(1) solid var(--sky-blue);
+		@include interactive-states(background, none, none, none);
+		@include interactive-states(fill, var(--sky-blue), var(--sky-blue), var(--sky-blue));
+
+		img,
+		svg {
+			width: rem(21);
+			height: rem(15);
+			flex-shrink: 0;
+			object-fit: contain;
+		}
+	}
+
+	&__cart {
+		background: var(--blue);
+		@include interactive-states(box-shadow, var(--shadow-cart), var(--shadow-cart), var(--shadow-cart));
+		position: relative;
+		isolation: isolate;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+		min-height: rem(292);
+		gap: rem(12);
+		padding: rem(17) rem(12) rem(26) rem(25);
+
+		@include mw767 {
+			min-height: rem(278);
+			padding: rem(20) rem(11) rem(16) rem(23);
+		}
+
+		&-img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			z-index: -3;
+			opacity: .2;
+
+			img,
+			svg {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&-date {
+			margin-left: auto;
+			margin-right: rem(-12);
+			margin-bottom: rem(36);
+			height: rem(20);
+			display: flex;
+			align-items: center;
+			padding: rem(3) rem(10);
+			border-radius: rem(50) 0 0 rem(50);
+			background: var(--sky-blue);
+
+			font-style: normal;
+			font-weight: 400;
+			font-size: rem(14);
+			line-height: 100%;
+			color: var(--white);
+
+			@include mw767 {
+				margin-bottom: rem(30);
+				margin-right: rem(-11);
+				padding: rem(3) rem(12);
+				width: rem(120);
+			}
+		}
+
+		&-title {
+			color: var(--white);
+		}
+
+		&-text {
+			font-style: normal;
+			font-weight: 400;
+			font-size: rem(15);
+			line-height: rem(18);
+			color: var(--white);
+
+		}
+	}
+
+
+}

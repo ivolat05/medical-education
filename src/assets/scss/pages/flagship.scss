@@ -1,6 +1,7 @@
 .flagship {
 	background: var(--white);
 	padding-top: rem(47);
+	padding-bottom: rem(56);
 
 	@include mw767 {
 		padding-top: rem(50);
