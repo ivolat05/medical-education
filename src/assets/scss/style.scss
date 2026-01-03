@@ -11,7 +11,7 @@
 
 // общие классы
 @import "../scss/utils/utilities.scss";
-
+@import "../scss/vendor/swiper-bundle.min.scss";
 
 // Компоненты интерфейса
 @import "../components/components.scss";
@@ -28,3 +28,8 @@
 @import "../scss/pages/registration.scss";
 @import "../scss/pages/organizers.scss";
 @import "../scss/pages/boost.scss";
+
+@import "../scss/pages/projects.scss";
+@import "../scss/pages/nearest.scss";
+@import "../scss/pages/website.scss";
+@import "../scss/pages/flagship.scss";

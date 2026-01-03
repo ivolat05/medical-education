@@ -1,0 +1,101 @@
+.select {
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+}
+
+.select.is-active {
+	.select-arrow {
+		transform: rotate(180deg);
+	}
+}
+
+.select.is-active .select__body {
+	display: flex;
+
+}
+
+.select__header {
+	width: 100%;
+	height: rem(25);
+	padding: rem(7) rem(12);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: rem(1) solid var(--sky-blue);
+	border-radius: rem(70);
+
+	font-style: normal;
+	font-weight: 400;
+	font-size: rem(12);
+	line-height: 100%;
+	color: var(--sky-blue);
+	text-decoration: underline;
+	gap: rem(12);
+
+
+	.select-arrow {
+		flex-shrink: 0;
+		object-fit: contain;
+		width: rem(10);
+		stroke: var(--sky-blue);
+		fill: none;
+	}
+}
+
+.select__body {
+	padding: rem(11);
+	width: 100%;
+	min-width: rem(214);
+	position: absolute;
+	left: 0;
+	top: calc(100% + rem(9));
+	display: none;
+	z-index: 10;
+	box-shadow: var(--shadow-7);
+	background: var(--white);
+	border: rem(1) solid var(--sky-blue);
+	flex-direction: column;
+	gap: rem(2);
+	align-items: flex-start;
+
+}
+
+.select__item {
+	cursor: pointer;
+	width: 100%;
+	min-height: rem(20);
+	font-family: 'ClearSans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: rem(12);
+	line-height: rem(18);
+	text-align: left;
+	color: var(--sky-blue);
+	padding: rem(1.5) rem(5);
+	@include interactive-states(background, var(--sky-blue), var(--sky-blue), var(--sky-blue));
+	@include interactive-states(color, var(--white), var(--white), var(--white));
+}
+
+.select__current {
+	font-family: 'ClearSans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: rem(12);
+	line-height: rem(18);
+	text-decoration: underline;
+	color: var(--sky-blue);
+	word-break: break-all;
+	@include hideText(1);
+}
+
+.select__current.selected {
+	color: var(--sky-blue);
+}
+
+
+
+.select__body-wrapp {
+	overflow: auto;
+	max-height: rem(135);
+}

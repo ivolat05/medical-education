@@ -298,3 +298,10 @@ $max- максимальный размер шрифта
 		background: var(--black-0);
 	}
 }
+
+@mixin square($width: rem(20)) {
+	width: $width;
+	height: $width;
+	object-fit: contain;
+
+}

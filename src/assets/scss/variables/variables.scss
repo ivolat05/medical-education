@@ -9,6 +9,7 @@
 	--bllue-dark: #3C4677;
 	--navy-blue: #253F73;
 	--sky-blue: #16C5DB;
+	--sky-blue-85: rgba(22, 197, 219, .85);
 	--light-gray: #EAEAEA;
 	--gray: #D9D9D9;
 	--gray-dark-47: rgba(226, 226, 226, 0.47);
@@ -17,8 +18,16 @@
 	--white-80: rgba(255, 255, 255, .8);
 	--white-86: rgba(255, 255, 255, .86);
 	--black-0: rgba(0, 0, 0, 0);
-
+	--light-gray: #F2F2F2;
 	--black: #000000;
+	--red-oragne-20: rgba(255, 82, 7, 0.2);
+	--red-oragne: #FF5207;
+	--cyan: #16C5DB;
+	--cyan-20: rgba(22, 197, 219, 0.2);
+	--azure: #1699DB;
+	--azure-20: rgba(22, 153, 219, 0.2);
+	--teal: #35CCA1;
+	--teal-20: rgba(53, 204, 161, 0.2);
 	/*gradient*/
 	--blue-gradient: linear-gradient(99.53deg, #6383C7 23.8%, #3C4677 118.93%);
 	--blue-gradient-2: linear-gradient(180deg, #6383C7 22.02%, #3C4677 95.75%);
@@ -35,7 +44,10 @@
 	--shadow-4: 6px 6px 4px rgba(0, 0, 0, 0.25);
 	--shadow-5: 4px 6px 4px rgba(0, 0, 0, 0.25);
 	--shadow-6: 17px 4px 13px rgba(0, 0, 0, 0.25);
+	--shadow-7: 9px 11px 14px rgba(0, 0, 0, 0.25);
 	--shadwo-top: 0px -5px 14px rgba(0, 0, 0, 0.25);
+	--shadow-cart: 6px 8px 8px rgba(0, 0, 0, 0.25);
+	--shadow-back: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	--hover-trans: .4s;
 	--z-index-0: 0;
 	--z-index-1: 1;

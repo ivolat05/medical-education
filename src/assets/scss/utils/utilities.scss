@@ -111,6 +111,10 @@ time {
 	min-height: 100dvh;
 	flex-direction: column;
 	overflow: hidden;
+
+	&-light-gray {
+		background: var(--light-gray);
+	}
 }
 
 .container {

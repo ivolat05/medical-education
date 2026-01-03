@@ -34,7 +34,7 @@
 			font-size: rem(20);
 
 			@include mw992 {
-				font-size: 19px;
+				font-size: rem(19);
 			}
 		}
 	}

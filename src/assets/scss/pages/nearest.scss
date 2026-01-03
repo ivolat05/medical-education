@@ -1,0 +1,175 @@
+.nearest {
+	padding-top: rem(38);
+	padding-bottom: rem(57);
+
+	@media(max-width:rem(850.99)) {
+		padding-bottom: rem(78);
+	}
+
+	@include mw767 {
+		padding-top: rem(53);
+	}
+
+	&__container {
+		padding-right: rem(20);
+		padding-left: rem(20);
+
+		@include mw1240 {
+			padding-left: rem(10);
+			padding-right: rem(10);
+		}
+	}
+
+	&__title {
+		@include mw767 {
+			max-width: rem(350);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__header {
+
+		&::after,
+		&::before {
+			width: calc(50% - rem(210));
+
+			@include mw767 {
+				width: calc(50% - rem(112));
+				top: 27%;
+			}
+		}
+
+
+	}
+
+	&__fillter {
+		gap: rem(8) rem(12);
+		flex-wrap: wrap;
+		padding-top: rem(33);
+
+		@include mw767 {
+			padding-top: rem(25);
+		}
+
+		&-select {
+			width: auto;
+		}
+
+		&-btn {
+			min-width: rem(92);
+			height: rem(25);
+		}
+	}
+
+	&__footer {
+		gap: rem(17);
+		padding-top: rem(35);
+
+		@include mw767 {
+			padding-top: rem(30);
+		}
+
+		&-btn {
+			min-width: rem(172);
+		}
+	}
+
+	&__btn {
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include square(rem(36));
+		background: var(--sky-blue);
+		fill: var(--white);
+
+		border: rem(1) solid var(--sky-blue);
+		@include interactive-states(background, none, none, none);
+		@include interactive-states(fill, var(--sky-blue), var(--sky-blue), var(--sky-blue));
+
+		img,
+		svg {
+			width: rem(21);
+			height: rem(15);
+			flex-shrink: 0;
+			object-fit: contain;
+		}
+	}
+
+	&__cart {
+		background: var(--white);
+		border: rem(1) solid var(--gray);
+		@include interactive-states(box-shadow, var(--shadow-cart), var(--shadow-cart), var(--shadow-cart));
+		padding: rem(20);
+		display: flex;
+		flex-direction: column;
+		gap: rem(8);
+		min-height: rem(217);
+		height: auto;
+
+		&-place {
+			margin-left: rem(-20);
+			margin-right: auto;
+			min-height: rem(20);
+			padding-left: rem(20);
+			padding-right: rem(20);
+			padding: rem(3) rem(20);
+			border-radius: 0 rem(50) rem(50) 0;
+			background: var(--sky-blue);
+
+			font-style: normal;
+			font-weight: 400;
+			font-size: rem(14);
+			line-height: rem(16);
+			color: var(--white);
+		}
+
+		&-title {
+			padding-top: rem(4);
+			color: var(--navy-blue);
+		}
+
+		&-text {
+			padding-top: rem(3);
+
+			font-style: normal;
+			font-weight: 400;
+			font-size: rem(15);
+			line-height: rem(18);
+			color: var(--black);
+		}
+
+		&-btn {
+			margin: auto 0 0 auto;
+			font-style: normal;
+			font-weight: 700;
+			font-size: rem(12);
+			line-height: rem(16);
+			text-decoration-line: underline;
+			color: var(--sky-blue);
+			@include interactive-states(color, var(--navy-blue), var(--navy-blue), var(--navy-blue));
+		}
+
+	}
+
+	&__swiper {
+		padding-top: rem(30);
+
+		@include mw767 {
+			padding-top: rem(25);
+		}
+
+		&-slide {
+			opacity: 0;
+			pointer-events: none;
+
+			&.swiper-slide-active,
+			&.swiper-slide-active+&,
+			&.swiper-slide-active+&+& {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+	}
+}
